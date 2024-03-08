@@ -1,6 +1,10 @@
 
 .contact-form {
-    padding: 0 5vw;
+    padding: 0 2.5vw;
+}
+
+.contact-form > h1, .contact-form > p {
+    margin: 0;
 }
 
 form {
@@ -9,7 +13,7 @@ form {
 }
 
 .inputs {
-    padding: 2vh 0 10vh 0;
+    padding: 4vh 0 5vh 0;
     display: flex;
     flex-flow: row nowrap;
 }
@@ -23,9 +27,21 @@ form {
     justify-content: space-between
 }
 
+.input-group {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    padding: 0 0;
+}
+
+.input-group input{
+    flex-grow: 1
+}
+
 input {
-    padding: 1vh 0;
     border-radius: 8px;
+    font-size: 1.5em;
+    padding: 0.5vh 0
 }
 
 input[name="message"] {

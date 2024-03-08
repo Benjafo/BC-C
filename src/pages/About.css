@@ -1,21 +1,16 @@
 
 .about {
     position: relative;
-}
-
-.about-details {
-    flex-grow: 0;
+    display: block;
+    text-align: left;
 }
 
 .about img {
     max-width: 25%;
     height: auto;
-    position: absolute;
-    top: 0;
-    right: 5%;
-}
-
-.about h1, .about p {
-    text-align: left;
-    margin-right: 25%;
+    margin: 0 4vw 1vh 2.5vw;
+    outline: 0.4vh solid white;
+    outline-offset: -0.2vh;
+    border-radius: 0.25vw;
+    float: right;
 }

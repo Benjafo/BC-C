@@ -1,5 +1,5 @@
 import plat from '../assets/plat.png'
-import Page from './Page'
+import Page from '../Page'
 import './References.css'
 
 const References = () => {

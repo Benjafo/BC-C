@@ -9,21 +9,35 @@ const NavBar = () => {
             <div className="logo">
                 <NavLink to="/">
                     <img src={Logo} alt="logo" />
+                    <h1>Ben's Coin & Co</h1>
                 </NavLink>
             </div>
             <div className="navbar-contents">
                 <ul>
                     <li>
-                        <NavLink to="/" className={({isActive}) => (isActive ? "navbar-active" : 'none')}><p>Home</p></NavLink>
+                        <NavLink to="/" className={({isActive}) => (isActive ? "navbar-active" : 'none')}>
+                            <p>Home</p>
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/about" className={({isActive}) => (isActive ? "navbar-active" : 'none')}><p>About</p></NavLink>
+                        <NavLink to="/about" className={({isActive}) => (isActive ? "navbar-active" : 'none')}>
+                            <p>About</p>
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/contact" className={({isActive}) => (isActive ? "navbar-active" : 'none')}><p>Contact</p></NavLink>
+                        <NavLink to="/contact" className={({isActive}) => (isActive ? "navbar-active" : 'none')}>
+                            <p>Contact</p>
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/references" className={({isActive}) => (isActive ? "navbar-active" : 'none')}><p>References</p></NavLink>
+                        <NavLink to="/references" className={({isActive}) => (isActive ? "navbar-active" : 'none')}>
+                            <p>References</p>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/faq" className={({isActive}) => (isActive ? "navbar-active" : 'none')}>
+                            <p>FAQ</p>
+                        </NavLink>
                     </li>
                 </ul>
             </div>
