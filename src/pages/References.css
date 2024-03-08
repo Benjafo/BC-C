@@ -1,0 +1,39 @@
+.reference-list {
+    max-height: 65vh;
+    margin: 0 2vw;
+    /* overflow-y: scroll; */
+}
+
+.reference {
+    padding: 1.5vh 0
+}
+
+.reference p {
+    font-size: 1.25em;
+    margin: 0.1vh;
+}
+
+.reference-content {
+    text-align: left;
+    padding: 0 1vw;
+}
+
+
+
+/* clean scrollbar */
+
+/* ::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #555555;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #CCCCCC;
+} */

@@ -1,0 +1,21 @@
+
+.about {
+    position: relative;
+}
+
+.about-details {
+    flex-grow: 0;
+}
+
+.about img {
+    max-width: 25%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 5%;
+}
+
+.about h1, .about p {
+    text-align: left;
+    margin-right: 25%;
+}

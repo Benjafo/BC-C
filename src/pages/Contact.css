@@ -1,0 +1,38 @@
+
+.contact-form {
+    padding: 0 5vw;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.inputs {
+    padding: 2vh 0 10vh 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.form-split {
+    width: 50%;
+    padding: 0 2vw;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between
+}
+
+input {
+    padding: 1vh 0;
+    border-radius: 8px;
+}
+
+input[name="message"] {
+    flex-grow: 1
+}
+
+button[type="submit"] {
+    padding: 2vh 0;
+    margin: 0 2vw;
+}
