@@ -1,4 +1,17 @@
 
-.accordion {
-    background-color: black;
+.faq-page {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 50vw;
+}
+
+.faq-question {
+    margin: 1vh;
+    text-align: left;
+}
+
+.faq-answer {
+    margin: 1vh 1vh 1vh 5vh;
+    text-align: left;
 }

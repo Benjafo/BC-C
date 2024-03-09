@@ -1,3 +1,4 @@
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -13,50 +14,52 @@ const FAQ = () => {
         setExpanded(newExpanded ? panel : false);
     };
 
-    const faq = <div>
-        <Accordion className="accordion" expanded={expanded === 'panel1'} onChange={changePanel('panel1')}>
-            <AccordionSummary>
-                <p>What types of coin collections do you purchase?</p>
-            </AccordionSummary>
-            <AccordionDetails>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                    malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                    sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                    sit amet blandit leo lobortis eget.
-                </p>
-            </AccordionDetails>
-        </Accordion>
-        <Accordion className="accordion" expanded={expanded === 'panel2'} onChange={changePanel('panel2')}>
-            <AccordionSummary>
-                <p>How can I trust that you will provide a fair offer for my coin collection?</p>
-            </AccordionSummary>
-            <AccordionDetails>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                    malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                    sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                    sit amet blandit leo lobortis eget.
-                </p>
-            </AccordionDetails>
-        </Accordion>
-        <Accordion className="accordion" expanded={expanded === 'panel3'} onChange={changePanel('panel3')}>
-            <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-                <p>How long does the appraisal and purchase process take?</p>
-            </AccordionSummary>
-            <AccordionDetails>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                    malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                    sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                    sit amet blandit leo lobortis eget.
-                </p>
-            </AccordionDetails>
-        </Accordion>
+    const FAQData = [
+        {
+            question: 'What types of coin collections do you purchase?',
+            answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+            panel: 'question1'
+        },
+        {
+            question: 'How can I trust that you will provide a fair assessment and offer for my coin collection?',
+            answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+            panel: 'question2'
+        },
+        {
+            question: 'What expertise do you have in evaluating coin collections?',
+            answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+            panel: 'question3'
+        },
+        {
+            question: 'How long does the evaluation process typically take?',
+            answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+            panel: 'question4'
+            
+        },
+        {
+            question: 'What happens to my coin collection after I sell it to you?',
+            answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+            panel: 'question5'
+            
+        }
+    ]
+
+    const FAQs = <div className="faq-page">
+        <h1>Frequently Asked Questions</h1>
+        {FAQData.map((faq) => (
+            <Accordion sx={{backgroundColor:'black'}} expanded={expanded === faq.panel} key={faq.panel} onChange={changePanel(faq.panel)}>
+                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" expandIcon={<ExpandMoreIcon />}>
+                    <p className='faq-question'>{faq.question}</p>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <p className='faq-answer'>{faq.answer}</p>
+                </AccordionDetails>
+            </Accordion>
+        ))}
     </div>
     const image = <img src={junk} alt="Junk Silver Coins" />
 
-    return <Page primaryContent={faq} secondaryContent={image} />
+    return <Page primaryContent={FAQs} secondaryContent={image} />
 }
 
 export default FAQ
