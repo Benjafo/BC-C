@@ -34,11 +34,11 @@ const NavBar = () => {
                             <p>References</p>
                         </NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <NavLink to="/faq" className={({isActive}) => (isActive ? "navbar-active" : 'none')}>
                             <p>FAQ</p>
                         </NavLink>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </nav>
