@@ -14,3 +14,22 @@
     border-radius: 0.25vw;
     float: right;
 }
+
+a {
+    color: #FFFFFF;
+}
+
+a:link
+{
+    color:#FFFFFF;
+}
+
+a:visited
+{
+    color:#FFFFFF;
+}
+
+a:hover
+{
+    color:#FFFFFF;
+}
